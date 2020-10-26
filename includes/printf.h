@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 23:46:05 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/27 16:44:39 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:23:32 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ t_sf			g_sf;
 int				ft_printf (const char *format, ...);
 void			ft_putchar(char c);
 int				ft_numlen(int nb);
-int				ft_atoi(char *s);
+int				ft_printf_atoi(char *s);
 void			ft_putstr(char *str);
 int				is_set(char c, char *set);
 void			ft_putadress(void *p);

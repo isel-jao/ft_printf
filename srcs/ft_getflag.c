@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 19:55:35 by isel-jao          #+#    #+#             */
-/*   Updated: 2020/10/26 11:05:24 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:24:11 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	get_value(int *index, char *s, va_list pa)
 	if (s[i] == '*')
 		nb = va_arg(pa, int);
 	else
-		nb = ft_atoi(&s[i]);
+		nb = ft_printf_atoi(&s[i]);
 	if (s[i] == '*')
 		i++;
 	else
