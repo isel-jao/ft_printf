@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_printf_strdup.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 05:35:03 by yqodsi            #+#    #+#             */
-/*   Updated: 2020/10/26 11:33:57 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:38:11 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/printf.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_printf_strdup(const char *s1)
 {
 	char	*str;
 	int		i;

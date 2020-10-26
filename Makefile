@@ -6,7 +6,7 @@
 #    By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/18 12:43:37 by isel-jao          #+#    #+#              #
-#    Updated: 2020/10/26 11:34:33 by isel-jao         ###   ########.fr        #
+#    Updated: 2020/10/26 11:37:46 by isel-jao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRCS    = 	ft_printf_atoi.c \
 			ft_reset.c \
 			ft_getflag.c \
 			ft_convflag.c \
-			ft_strdup.c \
+			ft_printf_strdup.c \
 			ft_puts.c \
 			ft_putc.c \
 			ft_putd.c \
