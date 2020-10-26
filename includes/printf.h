@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 23:46:05 by isel-jao          #+#    #+#             */
-/*   Updated: 2020/10/26 11:23:32 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:34:52 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int				ft_numlenx(unsigned nb);
 void			ft_convflag(va_list pa);
 int				ft_max(int a, int b);
 char			*ft_strdup(const char *s1);
-int				ft_strlen(const char *str);
+int				ft_printf_strlen(const char *str);
 void			ft_puts(void);
 void			ft_putc(void);
 void			ft_putd(void);

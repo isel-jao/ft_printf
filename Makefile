@@ -6,7 +6,7 @@
 #    By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/18 12:43:37 by isel-jao          #+#    #+#              #
-#    Updated: 2020/10/26 11:25:41 by isel-jao         ###   ########.fr        #
+#    Updated: 2020/10/26 11:34:33 by isel-jao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ INC_DIR		=	./includes/
 
 SRCS    = 	ft_printf_atoi.c \
 			ft_printf.c \
-			ft_strlen.c \
+			ft_printf_strlen.c \
 			is_set.c \
 			ft_reset.c \
 			ft_getflag.c \

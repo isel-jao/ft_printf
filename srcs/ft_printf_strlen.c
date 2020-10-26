@@ -6,13 +6,13 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 23:49:54 by isel-jao          #+#    #+#             */
-/*   Updated: 2020/10/26 11:08:31 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:34:15 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/printf.h"
 
-int	ft_strlen(const char *str)
+int	ft_printf_strlen(const char *str)
 {
 	int i;
 

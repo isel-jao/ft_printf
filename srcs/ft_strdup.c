@@ -6,7 +6,7 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 05:35:03 by yqodsi            #+#    #+#             */
-/*   Updated: 2020/10/26 11:10:50 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:33:57 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	int		j;
 
 	j = 0;
-	if (!s1 || !(str = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
+	if (!s1 || !(str = malloc(sizeof(char) * (ft_printf_strlen(s1) + 1))))
 		return (NULL);
 	i = 0;
 	while (s1[i])
