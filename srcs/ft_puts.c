@@ -6,11 +6,11 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 14:54:34 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/26 17:28:38 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:07:33 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
 void	ft_putstr(char *str)
 {

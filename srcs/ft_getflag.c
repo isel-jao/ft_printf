@@ -6,16 +6,16 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 19:55:35 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/29 23:22:58 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:05:24 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
 static int	get_value(int *index, char *s, va_list pa)
 {
 	int i;
-	int	nb;
+	int nb;
 
 	i = *index;
 	nb = 0;
@@ -65,7 +65,7 @@ static void	get_wpp(char *s, va_list pa)
 
 void		ft_getflag(char *s, va_list pa)
 {
-	int	i;
+	int i;
 
 	i = 0;
 	while (is_set(s[i], "0123456789.*-"))

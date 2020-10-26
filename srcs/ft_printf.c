@@ -6,11 +6,11 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 21:30:21 by hnabil            #+#    #+#             */
-/*   Updated: 2019/11/28 04:20:57 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:08:59 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
 static void	ft_print(void)
 {
@@ -30,7 +30,7 @@ static void	ft_print(void)
 
 int			ft_printf(const char *s, ...)
 {
-	va_list pa;
+	va_list	pa;
 	int		i;
 
 	g_ret = 0;

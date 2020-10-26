@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putx.c                                          :+:      :+:    :+:   */
+/*   ft_putu.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/21 18:26:52 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/27 16:43:28 by isel-jao         ###   ########.fr       */
+/*   Created: 2019/11/22 23:42:06 by isel-jao          #+#    #+#             */
+/*   Updated: 2020/10/26 11:10:11 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
-int			ft_numlenx(unsigned nb)
+int			ft_numlenu(unsigned int nb)
 {
 	int i;
 
@@ -23,65 +23,34 @@ int			ft_numlenx(unsigned nb)
 	i = 0;
 	while (nb)
 	{
-		nb /= 16;
+		nb /= 10;
 		i++;
 	}
 	return (i);
 }
 
-static void	ft_putlowx(unsigned int nb)
+static void	ft_putunsigned(unsigned int nb)
 {
 	int len;
 	int i;
 	int a;
-	int x;
 
 	if (!g_numf.value && g_syntax.point && !g_syntax.precesion)
 		return ;
 	i = 0;
 	a = 1;
-	len = ft_numlenx(nb);
+	len = ft_numlenu(nb);
 	while (++i < len)
-		a *= 16;
+		a *= 10;
 	while (a)
 	{
-		x = nb / a;
-		if (x < 10)
-			ft_putchar((nb / a) + 48);
-		else
-			ft_putchar((nb / a) + 87);
+		ft_putchar((nb / a) + 48);
 		nb %= a;
-		a /= 16;
+		a /= 10;
 	}
 }
 
-static void	ft_putbigx(unsigned nb)
-{
-	int len;
-	int i;
-	int a;
-	int x;
-
-	if (!g_numf.value && g_syntax.point && !g_syntax.precesion)
-		return ;
-	i = 0;
-	a = 1;
-	len = ft_numlenx(nb);
-	while (++i < len)
-		a *= 16;
-	while (a)
-	{
-		x = nb / a;
-		if (x < 10)
-			ft_putchar((nb / a) + '0');
-		else
-			ft_putchar((nb / a) + 55);
-		nb %= a;
-		a /= 16;
-	}
-}
-
-void		ft_putx(void)
+void		ft_putu(void)
 {
 	int i;
 	int nb;
@@ -93,10 +62,7 @@ void		ft_putx(void)
 	i = 0;
 	while (i++ < g_numf.zeros)
 		ft_putchar('0');
-	if (g_syntax.type == 'x')
-		ft_putlowx(nb);
-	if (g_syntax.type == 'X')
-		ft_putbigx(nb);
+	ft_putunsigned(nb);
 	i = 0;
 	while (i++ < g_numf.as)
 		ft_putchar(' ');

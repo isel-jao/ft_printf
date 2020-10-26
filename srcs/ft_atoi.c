@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putc.c                                          :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/20 21:47:50 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/23 19:03:22 by isel-jao         ###   ########.fr       */
+/*   Created: 2019/11/07 23:53:16 by isel-jao          #+#    #+#             */
+/*   Updated: 2020/10/26 11:04:50 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
-void	ft_putchar(char c)
+int	ft_atoi(char *s)
 {
-	write(1, &c, 1);
-	g_ret++;
-}
+	long unsigned	ret;
 
-void	ft_putc(void)
-{
-	int i;
-
-	i = 0;
-	while (i++ < g_cf.zeros)
-		ft_putchar('0');
-	while (i++ <= g_cf.bs)
-		ft_putchar(' ');
-	ft_putchar(g_cf.value);
-	while (i++ <= g_cf.as + 1)
-		ft_putchar(' ');
+	ret = 0;
+	if (!s)
+		return (0);
+	while (*s >= '0' && *s <= '9')
+	{
+		ret = ret * 10 + *s - 48;
+		s++;
+	}
+	return (ret);
 }

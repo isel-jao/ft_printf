@@ -6,11 +6,11 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:25:31 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/29 18:50:02 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:05:12 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
 int		ft_max(int a, int b)
 {

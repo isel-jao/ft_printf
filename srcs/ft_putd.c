@@ -6,11 +6,11 @@
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 18:21:50 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/29 21:56:16 by isel-jao         ###   ########.fr       */
+/*   Updated: 2020/10/26 11:10:31 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
 int			ft_numlen(int nb)
 {
@@ -33,8 +33,8 @@ static void	ft_putnbr(int nb)
 {
 	int		len;
 	int		i;
-	long	nbr;
 	int		a;
+	long	nbr;
 
 	if (!g_numf.value && g_syntax.point && !g_syntax.precesion)
 		return ;

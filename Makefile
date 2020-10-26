@@ -6,12 +6,12 @@
 #    By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/18 12:43:37 by isel-jao          #+#    #+#              #
-#    Updated: 2019/11/29 23:32:12 by isel-jao         ###   ########.fr        #
+#    Updated: 2020/10/26 11:04:04 by isel-jao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		= gcc -Wall -Wextra -Werror
-AR      = ar rcs
+CC			=	gcc
+CFLAGS		=	-Wall -Wextra -Werror
 
 BLACK	= \033[0;30m
 RED		= \033[0;31m
@@ -23,8 +23,16 @@ CYAN	= \033[0;36m
 GRAY	= \033[0;37m
 NC		= \033[0m
 
+
+AR      = ar rcs
+
 NAME    = libftprintf.a
 HEAD    = printf.h
+
+SRCS_DIR	=	./srcs/
+OBJ_DIR		=	./objs/
+INC_DIR		=	./includes/
+
 SRCS    = 	ft_atoi.c \
 			ft_printf.c \
 			ft_strlen.c \
@@ -43,24 +51,30 @@ SRCS    = 	ft_atoi.c \
 			ft_numconv.c \
 			
 
-OBJS    = $(SRCS:.c=.o)
+OBJ			=	$(addprefix $(OBJ_DIR),$(SRCS:.c=.o))
 
+INC			=	$(addprefix -I,$(INC_DIR))
 
-all: $(NAME)
+RM			=	/bin/rm -f
+RM_DIR		=	/bin/rm -rf
 
-$(NAME): $(OBJS)
-	@$(AR) $(NAME) $^
-	@echo "$(YELLOW)ALL$(NC)"
-%.o : %.c
-	@$(CC) $(FLAGS) -c $<
+$(OBJ_DIR)%.o:$(SRCS_DIR)%.c $(INC_DIR)*.h
+	@$(CC) $(FLAGS) -c $< -o $@
+
+all:
+	@mkdir -p $(OBJ_DIR)
+	@$(MAKE) $(NAME) --no-print-directory
+
+$(NAME): $(OBJ)
+	@$(AR) $(NAME) $?
+
 
 clean:
-	@rm -f $(OBJS)
-	@echo "$(YELLOW)cleen$(NC)"
-	
+	@rm -rf $(OBJ_DIR)
+
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(YELLOW)fcleen$(NC)"
+
+eclean: clean fclean
+
 re: fclean all
-	@rm -f $(OBJS)
-	@echo "$(GREEN)ALL DONE$(NC)"

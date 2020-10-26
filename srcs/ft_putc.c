@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putc.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 23:49:54 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/23 18:29:30 by isel-jao         ###   ########.fr       */
+/*   Created: 2019/11/20 21:47:50 by isel-jao          #+#    #+#             */
+/*   Updated: 2020/10/26 11:06:43 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
-int	ft_strlen(const char *str)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	g_ret++;
+}
+
+void	ft_putc(void)
 {
 	int i;
 
 	i = 0;
-	if (str)
-	{
-		while (str[i])
-			i++;
-	}
-	return (i);
+	while (i++ < g_cf.zeros)
+		ft_putchar('0');
+	while (i++ <= g_cf.bs)
+		ft_putchar(' ');
+	ft_putchar(g_cf.value);
+	while (i++ <= g_cf.as + 1)
+		ft_putchar(' ');
 }

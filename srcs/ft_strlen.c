@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_set.c                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 20:47:43 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/23 18:30:47 by isel-jao         ###   ########.fr       */
+/*   Created: 2019/11/07 23:49:54 by isel-jao          #+#    #+#             */
+/*   Updated: 2020/10/26 11:08:31 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
-int	is_set(char c, char *set)
+int	ft_strlen(const char *str)
 {
-	while (*set)
+	int i;
+
+	i = 0;
+	if (str)
 	{
-		if (c == *set)
-			return (1);
-		set++;
+		while (str[i])
+			i++;
 	}
-	return (0);
+	return (i);
 }

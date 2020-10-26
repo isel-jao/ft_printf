@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   is_set.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isel-jao <isel-jao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 23:53:16 by isel-jao          #+#    #+#             */
-/*   Updated: 2019/11/28 18:37:42 by isel-jao         ###   ########.fr       */
+/*   Created: 2019/11/05 20:47:43 by isel-jao          #+#    #+#             */
+/*   Updated: 2020/10/26 11:08:27 by isel-jao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../includes/printf.h"
 
-int	ft_atoi(char *s)
+int	is_set(char c, char *set)
 {
-	long unsigned	ret;
-
-	ret = 0;
-	if (!s)
-		return (0);
-	while (*s >= '0' && *s <= '9')
+	while (*set)
 	{
-		ret = ret * 10 + *s - 48;
-		s++;
+		if (c == *set)
+			return (1);
+		set++;
 	}
-	return (ret);
+	return (0);
 }
