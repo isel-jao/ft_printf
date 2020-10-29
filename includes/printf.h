@@ -85,7 +85,7 @@ void			ft_cvflag(va_list pa);
 int				ft_numlenx(unsigned nb);
 void			ft_convflag(va_list pa);
 int				ft_max(int a, int b);
-char			*ft_strdup(const char *s1);
+char			*ft_printf_strdup(const char *s1);
 int				ft_printf_strlen(const char *str);
 void			ft_puts(void);
 void			ft_putc(void);

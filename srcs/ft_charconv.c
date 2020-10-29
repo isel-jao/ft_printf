@@ -16,9 +16,9 @@ void	ft_sconv(va_list pa)
 {
 	int	len;
 
-	g_sf.value = ft_strdup(va_arg(pa, char *));
+	g_sf.value = ft_printf_strdup(va_arg(pa, char *));
 	if (!g_sf.value)
-		g_sf.value = ft_strdup("(null)");
+		g_sf.value = ft_printf_strdup("(null)");
 	len = ft_printf_strlen(g_sf.value);
 	if (g_syntax.flag == '0' && g_syntax.point)
 		g_sf.zeros = g_syntax.width - ft_min(g_syntax.precesion, len);
